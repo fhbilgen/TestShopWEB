@@ -1,0 +1,12 @@
+﻿@page
+@model TestWEB.Pages.SomeRemoteCallsModel
+@{
+}
+
+<form method="post" asp-page-handler="CallALongFunction">
+    <button>Call a long executing function</button>
+</form>
+
+<form method="post" asp-page-handler="CallAnExceptionFunction">
+    <button>Call a function that throws an exception</button>
+</form>
