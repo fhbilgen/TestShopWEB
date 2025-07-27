@@ -1,7 +1,7 @@
 # Docs for the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # More GitHub Actions for Azure: https://github.com/Azure/actions
 
-name: Build and deploy ASP.Net Core app to Azure Web App - testshop
+name: Build and deploy ASP.Net Core app to Azure Web App - testshopapp
 
 on:
   push:
@@ -51,15 +51,15 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_33D7AB5F50034E21A9D7173BF7616A7D }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_24FB7DF838A04010BFA117F1F3814E0F }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_9145A0F33EF24EAFBE2BB6F4CC751A8C }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_5DECF6D855064412BF1C5D4EB1D63E08 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_C977E8B881F94ABCA1B35E9EA9647FDD }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DE58915B977A4CCEB3A7BD587BABD2FF }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v3
         with:
-          app-name: 'testshop'
+          app-name: 'testshopapp'
           slot-name: 'Production'
           package: .
           
